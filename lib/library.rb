@@ -12,7 +12,6 @@ class Library
 
   def add_author(author)
     authors << author
-
   end
 
 end

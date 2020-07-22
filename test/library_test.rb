@@ -57,7 +57,7 @@ class LibraryTest < Minitest::Test
 
     dpl.add_author(charlotte_bronte)
     dpl.add_author(harper_lee)
-
+binding.pry
     result = {:start=>"1847", :end=>"1857"}
     result2 = {:start=>"1960", :end=>"1960"}
 
