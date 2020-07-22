@@ -19,4 +19,17 @@ class LibraryTest < Minitest::Test
     assert_equal [], dpl.books
     assert_equal [], dpl.authors
   end
+
+  def test_add_authors
+    charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
+    harper_lee = Author.new({first_name: "Harper", last_name: "Lee"})
+
+    dpl.add_author(charlotte_bronte)
+    dpl.add_author(harper_lee)
+
+    assert_equal [], dpl.authors
+  end
+
+
+
 end
