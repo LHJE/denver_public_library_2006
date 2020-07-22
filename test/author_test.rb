@@ -47,6 +47,7 @@ class AuthorTest < Minitest::Test
   end
 
   def test_new_book_has_attributes
+    skip
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
 
@@ -56,8 +57,10 @@ class AuthorTest < Minitest::Test
   def test_book_goes_into_books
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
+    villette = charlotte_bronte.write("Villette", "1853")
+    binding.pry
 
-    assert_equal jane_eyre, charlotte_bronte.books
+    assert_equal [jane_eyre, villette], charlotte_bronte.books
   end
 
 
