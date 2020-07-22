@@ -59,8 +59,12 @@ class LibraryTest < Minitest::Test
     dpl.add_author(harper_lee)
 
     result = {:start=>"1847", :end=>"1857"}
+    result2 = {:start=>"1960", :end=>"1960"}
 
     assert_equal result, dpl.publication_time_frame_for(charlotte_bronte)
+    assert_equal result2, dpl.publication_time_frame_for(harper_lee)
   end
+
+
 
 end
