@@ -42,7 +42,7 @@ class LibraryTest < Minitest::Test
     # binding.pry
     harper_lee = Author.new({first_name: "Harper", last_name: "Lee"})
     mockingbird = harper_lee.write("To Kill a Mockingbird", "July 11, 1960")
-    binding.pry
+    # binding.pry
     dpl.add_author(charlotte_bronte)
     dpl.add_author(harper_lee)
 
@@ -124,8 +124,6 @@ class LibraryTest < Minitest::Test
 
     dpl.add_author(charlotte_bronte)
     dpl.add_author(harper_lee)
-
-
 
     assert_equal true, dpl.checkout(jane_eyre)
     assert_equal true, dpl.checkout(mockingbird)

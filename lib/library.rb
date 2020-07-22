@@ -8,6 +8,7 @@ class Library
     @name = name
     @authors = []
     @lib_books = []
+    @lib_book_titles = []
     @pub_time_frame = {}
   end
 
@@ -34,6 +35,18 @@ class Library
     @pub_time_frame
   end
 
-
+  def checkout(wanted_book)
+    authors.each do |author|
+      author.books.each do |book|
+        lib_books << book
+      end
+    end
+    lib_books.each do |lib_book|
+      @lib_book_titles << lib_book.title
+    end
+    if @lib_book_titles.any?(wanted_book.title) == true
+      true
+    end
+  end
 
 end
